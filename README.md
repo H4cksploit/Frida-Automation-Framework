@@ -47,14 +47,141 @@ Frida-tools (optional - can be installed via GUI)
 Installation
 Clone the repository:
 
-bash
-git clone https://github.com/yourusername/frida-automation-framework.git
-cd frida-automation-framework
+```bash
+
+git clone https://github.com/H4cksploit/Frida-Automation-Framework.git
+cd Frida-Automation-Framework
+```
 Install dependencies:
 
-bash
+```bash
 pip install -r requirements.txt
+```
 Run the application:
 
-bash
-python frida_auto.py
+```bash
+python frida-run.py
+```
+📋 Usage Guide
+Complete Workflow
+Step 1: Connect Device
+Enable USB Debugging on Android device
+
+Connect via USB cable
+
+Click "Detect Devices" or press Ctrl+R
+
+Step 2: Install Frida Server
+Select your device from the list
+
+Click "Auto Setup Device" or press Ctrl+A
+
+Framework automatically:
+
+Detects device architecture
+
+Downloads correct frida-server
+
+Pushes to /data/local/tmp/
+
+Sets permissions
+
+Starts the server
+
+Step 3: Load Scripts
+Local Scripts: Click "Scan" (Ctrl+S) to load from:
+
+scripts/ folder
+
+frida_scripts/ folder
+
+Desktop/Frida_Scripts/
+
+CodeShare Scripts: Enter author/script format:
+
+```text
+pcipolloni/universal-android-ssl-pinning-bypass
+hluwa/strongR-frida-android
+dki/ios-monitor
+```
+Step 4: Execute Script
+Select target application
+
+Choose execution mode:
+
+🔗 Attach - Inject into running app
+
+🚀 Spawn - Launch fresh instance (requires root)
+
+Click "Execute Script" (Ctrl+E)
+
+Monitor real-time output
+
+🏗️ Architecture
+```text
+Frida Automation Framework
+├── GUI Layer (Tkinter)
+│   ├── Device Management Panel
+│   ├── Script Management Panel
+│   ├── Execution Control Panel
+│   └── Output Terminal
+├── Service Layer
+│   ├── FridaServerInstaller
+│   ├── CodeShare Manager
+│   └── ADB Manager
+└── Integration Layer
+    ├── Frida CLI Integration
+    ├── ADB Integration
+    └── CodeShare API Integration
+```
+
+Custom Installation Paths
+
+The framework supports multiple installation paths:
+
+```
+FRIDA_SERVER_PATHS = [
+    "/data/local/tmp/frida-server",  # Default
+    "/sdcard/frida-server",          # SD Card
+    "/system/bin/frida-server",      # System (root)
+]
+```
+CodeShare Integration
+```
+# Direct usage of community scripts
+frida -U --codeshare author/script-name -p PID
+```
+Manual Operations
+Menu → Install → Manual Server Push - Custom frida-server installation
+
+Menu → Device → ADB Shell - Direct ADB access
+
+Menu → Tools → Frida Console - Interactive Frida REPL
+
+📁 Project Structure
+```
+frida-automation-framework/
+├── frida_auto.py              # Main application
+├── requirements.txt           # Python dependencies
+├── README.md                  # This file
+├── scripts/                   # User scripts folder
+│   ├── ssl_bypass.js         # SSL pinning bypass
+│   ├── root_detection.js     # Root detection bypass
+│   └── custom_hooks.js       # User custom scripts
+├── samples/                   # Sample scripts
+│   ├── android/
+│   └── ios/
+└── docs/                     # Documentation
+    ├── workflow.md
+    └── troubleshooting.md
+
+```
+
+🌟 Use Cases
+Dynamic analysis of mobile applications
+
+Bypassing security controls
+
+Vulnerability discovery
+
+<p align="center"> Made with ❤️ for the security community </p><p align="center"> If you find this tool useful, please give it a ⭐ on GitHub! </p>
