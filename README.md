@@ -8,30 +8,30 @@ Frida Automation Framework simplifies mobile application security testing by pro
 
 🎯 Core Features
 
-Auto frida-server Installation - Automatically detects device architecture and installs correct frida-server
+✅ Auto frida-server Installation - Automatically detects device architecture and installs correct frida-server
 
-Windows Compatible - Optimized for Windows OS with proper path handling
+✅ Windows Compatible - Optimized for Windows OS with proper path handling
 
-Frida CodeShare Integration - Direct access to community scripts
+✅ Frida CodeShare Integration - Direct access to community scripts
 
-Root Detection - Automatic root status checking
+✅ Root Detection - Automatic root status checking
 
-Script Organizer - Manage local and online scripts efficiently
+✅ Script Organizer - Manage local and online scripts efficiently
 
-Real-time Output - Live monitoring of script execution
+✅ Real-time Output - Live monitoring of script execution
 
 
 🛠️ Technical Features
 
-Multi-path Support - Install frida-server to different locations
+✅ Multi-path Support - Install frida-server to different locations
 
-ADB Management - Built-in ADB tools and reconnect functionality
+✅ ADB Management - Built-in ADB tools and reconnect functionality
 
-Progress Tracking - Visual progress bars for operations
+✅ Progress Tracking - Visual progress bars for operations
 
-Error Handling - Comprehensive error messages and solutions
+✅ Error Handling - Comprehensive error messages and solutions
 
-Export Capabilities - Save execution logs for analysis
+✅ Export Capabilities - Save execution logs for analysis
 
 
 🚀 Quick Start
@@ -72,32 +72,34 @@ Connect via USB cable
 Click "Detect Devices" or press Ctrl+R
 
 Step 2: Install Frida Server
-Select your device from the list
 
-Click "Auto Setup Device" or press Ctrl+A
+-->Select your device from the list
 
-Framework automatically:
+-->Click "Auto Setup Device" or press Ctrl+A
 
-Detects device architecture
+-->Framework automatically:
 
-Downloads correct frida-server
+-->Detects device architecture
 
-Pushes to /data/local/tmp/
+-->Downloads correct frida-server
 
-Sets permissions
+-->Pushes to /data/local/tmp/
 
-Starts the server
+-->Sets permissions
+
+-->Starts the server
 
 Step 3: Load Scripts
-Local Scripts: Click "Scan" (Ctrl+S) to load from:
 
-scripts/ folder
+-->Local Scripts: Click "Scan" (Ctrl+S) to load from:
 
-frida_scripts/ folder
+-->scripts/ folder
 
-Desktop/Frida_Scripts/
+-->frida_scripts/ folder
 
-CodeShare Scripts: Enter author/script format:
+-->Desktop/Frida_Scripts/
+
+-->CodeShare Scripts: Enter author/script format:
 
 ```text
 pcipolloni/universal-android-ssl-pinning-bypass
@@ -105,17 +107,18 @@ hluwa/strongR-frida-android
 dki/ios-monitor
 ```
 Step 4: Execute Script
-Select target application
 
-Choose execution mode:
+-->Select target application
+
+-->Choose execution mode:
 
 🔗 Attach - Inject into running app
 
 🚀 Spawn - Launch fresh instance (requires root)
 
-Click "Execute Script" (Ctrl+E)
+-->Click "Execute Script" (Ctrl+E)
 
-Monitor real-time output
+-->Monitor real-time output
 
 🏗️ Architecture
 ```text
