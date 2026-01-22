@@ -1,0 +1,18 @@
+let FridaDetection = Java.use("ws.krlp.FridaDetection");
+FridaDetection["checkForFridaFiles"].implementation = function () {
+    console.log(`files bypassed`);
+    return true;
+};
+
+let FridaDetection = Java.use("ws.krlp.FridaDetection");
+FridaDetection["checkForFridaPorts"].implementation = function () {
+    console.log(`Fridaports bypassed);
+    return true;
+};
+
+let FridaDetection = Java.use("ws.krlp.FridaDetection");
+FridaDetection["detectFrida"].implementation = function () {
+    console.log(`FridaDetection bypassed`);
+    return true;a
+};
+
