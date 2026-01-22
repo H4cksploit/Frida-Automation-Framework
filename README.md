@@ -194,6 +194,7 @@ frida-automation-framework/
 ```
 
 🌟 **Use Cases**
+
 Dynamic analysis of mobile applications
 
 Bypassing security controls
