@@ -4,7 +4,7 @@ frida-tools
 requests
 
 # Optional Dependencies (Uncomment if needed)
-colorama  # Colored terminal output
-pyinstaller  # For creating executable
-pillow  # Image handling for icons
-py-lzma  # XZ file extraction support
+#colorama  # Colored terminal output
+#pyinstaller  # For creating executable
+#pillow  # Image handling for icons
+#py-lzma  # XZ file extraction support
