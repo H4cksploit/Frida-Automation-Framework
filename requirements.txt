@@ -2,6 +2,7 @@
 frida
 frida-tools
 requests
+tkinter
 
 # Optional Dependencies (Uncomment if needed)
 #colorama  # Colored terminal output
