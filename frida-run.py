@@ -708,7 +708,7 @@ class FridaScriptRunner:
         center_frame = ModernFrame(stats_frame, bg=Config.COLORS['card_bg'])
         center_frame.pack(side='right', expand=True, fill='both')
     
-        dev_label = tk.Label(center_frame, text="                                                                                        Develop by: Ali Raza", 
+        dev_label = tk.Label(center_frame, text="                                                                                    Developed by: Ali Raza", 
                         bg=Config.COLORS['card_bg'], fg=Config.COLORS['accent'],
                         font=('Segoe UI', 15, 'bold'))
         dev_label.pack(expand=True)  # Center alignment
@@ -1823,3 +1823,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
