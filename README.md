@@ -6,6 +6,12 @@ A powerful, user-friendly GUI tool for automating Frida script execution on Andr
 
 Frida Automation Framework simplifies mobile application security testing by providing a comprehensive GUI interface for Frida scripting. It eliminates the need for manual command-line operations, making dynamic instrumentation accessible to both beginners and experts.
 
+**Tested** 
+
+Android emulator
+
+Memu
+
 ✨ **Features**
 
 🎯 **Core Features**
