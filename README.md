@@ -203,6 +203,8 @@ frida-automation-framework/
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/94e4391e-7e13-4d19-a179-77a7223c2363" />
 
+https://github.com/H4cksploit/Frida-Automation-Framework/blob/main/demo.mp4
+
 
 🌟 **Use Cases**
 
