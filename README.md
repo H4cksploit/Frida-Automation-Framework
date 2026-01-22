@@ -1,12 +1,14 @@
-🚀 Frida Automation Framework
+🚀 **Frida Automation Framework**
+
 A powerful, user-friendly GUI tool for automating Frida script execution on Android devices with Windows compatibility and CodeShare integration.
 
-📖 Overview
+📖 **Overview**
+
 Frida Automation Framework simplifies mobile application security testing by providing a comprehensive GUI interface for Frida scripting. It eliminates the need for manual command-line operations, making dynamic instrumentation accessible to both beginners and experts.
 
-✨ Features
+✨ **Features**
 
-🎯 Core Features
+🎯 **Core Features**
 
 ✅ Auto frida-server Installation - Automatically detects device architecture and installs correct frida-server
 
@@ -20,12 +22,17 @@ Frida Automation Framework simplifies mobile application security testing by pro
 
 ✅ Real-time Output - Live monitoring of script execution
 
+✅ Device Management - Auto-detect and manage
 
-🛠️ Technical Features
+🛠️ **Technical Features**
 
 ✅ Multi-path Support - Install frida-server to different locations
 
 ✅ ADB Management - Built-in ADB tools and reconnect functionality
+
+✅ Attach Mode - Attach to running apps
+
+✅ Spawn Mode - Launch fresh
 
 ✅ Progress Tracking - Visual progress bars for operations
 
@@ -34,8 +41,10 @@ Frida Automation Framework simplifies mobile application security testing by pro
 ✅ Export Capabilities - Save execution logs for analysis
 
 
-🚀 Quick Start
+🚀 **Quick Start**
+
 Prerequisites
+
 Python 3.7 or higher
 
 ADB (Android Debug Bridge)
@@ -44,7 +53,8 @@ USB Debugging enabled on Android device
 
 Frida-tools (optional - can be installed via GUI)
 
-Installation
+**Installation**
+
 Clone the repository:
 
 ```bash
@@ -62,14 +72,17 @@ Run the application:
 ```bash
 python frida-run.py
 ```
-📋 Usage Guide
+📋**Usage Guide:**
+
 Complete Workflow
+
 Step 1: Connect Device
-Enable USB Debugging on Android device
 
-Connect via USB cable
+-->Enable USB Debugging on Android device
 
-Click "Detect Devices" or press Ctrl+R
+-->Connect via USB cable
+
+-->Click "Detect Devices" or press Ctrl+R
 
 Step 2: Install Frida Server
 
@@ -112,15 +125,15 @@ Step 4: Execute Script
 
 -->Choose execution mode:
 
-🔗 Attach - Inject into running app
+-->Attach - Inject into running app
 
-🚀 Spawn - Launch fresh instance (requires root)
+-->Spawn - Launch fresh instance (requires root)
 
 -->Click "Execute Script" (Ctrl+E)
 
 -->Monitor real-time output
 
-🏗️ Architecture
+🏗️ **Architecture**
 ```text
 Frida Automation Framework
 ├── GUI Layer (Tkinter)
@@ -138,7 +151,7 @@ Frida Automation Framework
     └── CodeShare API Integration
 ```
 
-Custom Installation Paths
+**Custom Installation Paths**
 
 The framework supports multiple installation paths:
 
@@ -149,19 +162,19 @@ FRIDA_SERVER_PATHS = [
     "/system/bin/frida-server",      # System (root)
 ]
 ```
-CodeShare Integration
+**CodeShare Integration**
 ```
 # Direct usage of community scripts
 frida -U --codeshare author/script-name -p PID
 ```
-Manual Operations
+**Manual Operations**
 Menu → Install → Manual Server Push - Custom frida-server installation
 
 Menu → Device → ADB Shell - Direct ADB access
 
 Menu → Tools → Frida Console - Interactive Frida REPL
 
-📁 Project Structure
+📁 **Project Structure**
 ```
 frida-automation-framework/
 ├── frida_auto.py              # Main application
@@ -180,7 +193,7 @@ frida-automation-framework/
 
 ```
 
-🌟 Use Cases
+🌟 **Use Cases**
 Dynamic analysis of mobile applications
 
 Bypassing security controls
