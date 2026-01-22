@@ -199,6 +199,11 @@ frida-automation-framework/
 
 ```
 
+**Video & Screen Shot**
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/94e4391e-7e13-4d19-a179-77a7223c2363" />
+
+
 🌟 **Use Cases**
 
 Dynamic analysis of mobile applications
