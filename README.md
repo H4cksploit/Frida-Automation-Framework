@@ -203,7 +203,6 @@ frida-automation-framework/
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/94e4391e-7e13-4d19-a179-77a7223c2363" />
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7418304572496117760?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 🌟 **Use Cases**
 
