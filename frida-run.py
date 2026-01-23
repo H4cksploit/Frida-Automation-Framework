@@ -2,6 +2,7 @@
 """
 Frida Automation Framework
 Version: 3.5
+Fixed Script Selection Issue
 """
 
 import tkinter as tk
@@ -305,6 +306,7 @@ class FridaScriptRunner:
         self.is_running = False
         self.device_rooted = False
         self.scripts = []
+        self.filtered_scripts = []  # For search functionality
         self.device_arch = None
         self.os_type = platform.system()
         
@@ -708,7 +710,7 @@ class FridaScriptRunner:
         center_frame = ModernFrame(stats_frame, bg=Config.COLORS['card_bg'])
         center_frame.pack(side='right', expand=True, fill='both')
     
-        dev_label = tk.Label(center_frame, text="                                                                                    Developed by: Ali Raza", 
+        dev_label = tk.Label(center_frame, text="                                                                                        Develop by: Ali Raza", 
                         bg=Config.COLORS['card_bg'], fg=Config.COLORS['accent'],
                         font=('Segoe UI', 15, 'bold'))
         dev_label.pack(expand=True)  # Center alignment
@@ -1391,6 +1393,8 @@ Java.perform(function() {
         
         self.script_stat.config(text=f"Scripts: {len(scripts)}")
         self.scripts = scripts
+        # Reset filtered scripts when showing all
+        self.filtered_scripts = scripts.copy()
     
     def filter_scripts(self, event=None):
         """Filter scripts based on search"""
@@ -1402,18 +1406,46 @@ Java.perform(function() {
             return
         
         # Filter scripts
-        filtered = [s for s in self.scripts if search in os.path.basename(s).lower()]
+        self.filtered_scripts = [s for s in self.scripts if search in os.path.basename(s).lower()]
+        
+        # Update listbox with filtered scripts
         self.script_listbox.delete(0, 'end')
-        for script in filtered:
+        for script in self.filtered_scripts:
             self.script_listbox.insert('end', os.path.basename(script))
+        
+        # Update count
+        self.script_stat.config(text=f"Scripts: {len(self.filtered_scripts)}")
     
     def on_script_select(self, event):
-        """Handle script selection"""
+        """Handle script selection - FIXED VERSION"""
         selection = self.script_listbox.curselection()
         if selection:
             index = selection[0]
-            self.selected_script = self.scripts[index]
-            self.log(f"Selected script: {os.path.basename(self.selected_script)}", "success")
+            
+            # Get the filename from listbox
+            selected_filename = self.script_listbox.get(index)
+            
+            # Find the matching script in filtered_scripts
+            self.selected_script = None
+            
+            # First try to find in filtered scripts (if search is active)
+            for script in self.filtered_scripts:
+                if os.path.basename(script) == selected_filename:
+                    self.selected_script = script
+                    break
+            
+            # If not found in filtered, try in all scripts
+            if not self.selected_script:
+                for script in self.scripts:
+                    if os.path.basename(script) == selected_filename:
+                        self.selected_script = script
+                        break
+            
+            if self.selected_script:
+                self.log(f"Selected script: {os.path.basename(self.selected_script)}", "success")
+                print(f"DEBUG: Selected full path: {self.selected_script}")
+            else:
+                self.log(f"Could not find script file: {selected_filename}", "warning")
     
     def use_codeshare(self):
         """Use CodeShare script"""
@@ -1821,6 +1853,4 @@ def main():
     root.mainloop()
 
 if __name__ == "__main__":
-
     main()
-
